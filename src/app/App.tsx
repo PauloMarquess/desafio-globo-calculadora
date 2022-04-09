@@ -1,11 +1,15 @@
 import Button from "../components/Button";
-import { KeyboardNumeric } from "../Mocks";
+import { KeyboardNumeric,Operations } from "../Mocks";
 
 const App=()=> {
   return (
-    <div >
-      {KeyboardNumeric.map((numb)=>(<Button onClick={()=>{}} name={numb.keys_numb}/>))}
-     {/* <Button onClick={()=>{}} name="teste"/> */}
+    <div style={{display:'flex',gap:'30px'}}> 
+      <div>
+       {KeyboardNumeric.map((numb)=>(<Button onClick={()=>{}} name={numb.keys_numb}/>))}
+      </div>
+      <div>
+        {Operations.map((numb)=>(<Button onClick={()=>{}} name={numb.operation}/>))}
+      </div>
     </div>
   );
 }

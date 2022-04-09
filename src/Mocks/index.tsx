@@ -36,5 +36,19 @@ export const KeyboardNumeric =[
     keys_numb :3,
      value:3
   },
-  
+]
+
+export const Operations = [
+  {
+    operation:'*'
+  },
+  {
+    operation:'/'
+  },
+  {
+    operation:'+'
+  },
+  {
+    operation:'-'
+  },
 ]

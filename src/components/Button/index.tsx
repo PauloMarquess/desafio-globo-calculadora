@@ -1,5 +1,5 @@
 interface ButtonProps{
-  name:number,
+  name:number | string,
   onClick:()=>void,
   
 }
