@@ -1,19 +1,36 @@
+import { useState } from "react";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import { KeyboardNumeric, Operations } from "../Mocks";
 
 const App = () => {
+  const [number, setNumber] = useState(1);
+
+  const inputNumber = ({ e }: any) => {
+    let input = e.target.value;
+    setNumber(input);
+    console.log("foi");
+  };
+  const clear = () => {
+    setNumber(0);
+  };
+
   return (
-    <div style={{ display: "flex", gap: "30px", flexDirection: "column" }}>
-      <Input state={""} />
+    <div>
+      <Input state={number} />
       <div>
         {KeyboardNumeric.map((numb) => (
-          <Button onClick={() => {}} name={numb.keys_numb} />
+          <Button
+            onClick={inputNumber}
+            value={numb.value}
+            name={numb.keys_numb}
+          />
         ))}
       </div>
       <div>
-        {Operations.map((numb) => (
-          <Button onClick={() => {}} name={numb.operation} />
+        <Button onClick={clear} name="AC" />
+        {Operations.map((op) => (
+          <Button onClick={() => {}} name={op.operation} />
         ))}
       </div>
     </div>

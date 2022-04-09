@@ -1,12 +1,15 @@
 interface ButtonProps {
   name: number | string;
-  onClick: () => void;
+  onClick: any;
+  value?: number | string;
 }
 
-export const Button = ({ name, onClick }: ButtonProps) => {
+export const Button = ({ name, onClick, value }: ButtonProps) => {
   return (
     <div>
-      <button onClick={onClick}>{name}</button>
+      <button value={value} onClick={onClick}>
+        {name}
+      </button>
     </div>
   );
 };
