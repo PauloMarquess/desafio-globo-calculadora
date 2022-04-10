@@ -14,8 +14,10 @@ const App = () => {
   const [number, setNumber] = useState<any>(0);
 
   const clear = () => {
+    console.log("visor limpo!");
     setNumber(0);
   };
+  const result = number;
 
   return (
     <Container>
@@ -26,18 +28,25 @@ const App = () => {
         </header>
         <KeyboardCalculator>
           <Numeric>
-            {KeyboardNumeric.map((num) => (
+            {KeyboardNumeric.map((num, index) => (
               <Button
+                key={index}
                 onClick={() => setNumber(`${number + num.keys_numb}`)}
                 value={num.keys_numb}
                 name={num.keys_numb}
               />
             ))}
-            <Button name="=" onClick={() => {}} />
+            <Button
+              name="="
+              onClick={() => {
+                console.log("testando", result);
+              }}
+            />
           </Numeric>
           <Operator>
-            {Operations.map((op) => (
+            {Operations.map((op, index) => (
               <Button
+                key={index}
                 onClick={() => setNumber(`${number + op.operation}`)}
                 name={op.operation}
                 value={op.operation}

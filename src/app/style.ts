@@ -8,7 +8,7 @@ export const Container = styled.div`
   width:100% ;
   height:100vh ;
   background-image:url('https://img.freepik.com/fotos-gratis/negocio-de-tecnologia-globo-com-papel-de-parede-gradiente_53876-97642.jpg?w=2000') ;
-  background-position:center right ;
+  background-position:center center ;
   
 `;
 export const Calculator =styled.div`

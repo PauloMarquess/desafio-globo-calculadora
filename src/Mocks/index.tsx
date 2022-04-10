@@ -1,3 +1,6 @@
+interface NumProps {
+  keys_numb: number;
+}
 export const KeyboardNumeric = [
   {
     keys_numb: 7,
