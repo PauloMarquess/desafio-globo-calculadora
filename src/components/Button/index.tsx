@@ -1,3 +1,5 @@
+import { CardButton } from "./style";
+
 interface ButtonProps {
   name: number | string;
   onClick: () => void;
@@ -6,11 +8,11 @@ interface ButtonProps {
 
 export const Button = ({ name, onClick, value }: ButtonProps) => {
   return (
-    <div>
+    <CardButton>
       <button value={value} onClick={onClick}>
         {name}
       </button>
-    </div>
+    </CardButton>
   );
 };
 

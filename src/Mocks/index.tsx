@@ -26,6 +26,12 @@ export const KeyboardNumeric = [
   {
     keys_numb: 3,
   },
+  {
+    keys_numb: 0,
+  },
+  {
+    keys_numb: ".",
+  },
 ];
 
 export const Operations = [
