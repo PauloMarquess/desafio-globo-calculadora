@@ -6,11 +6,6 @@ import { KeyboardNumeric, Operations } from "../Mocks";
 const App = () => {
   const [number, setNumber] = useState<any>(1);
 
-  const inputNumber = ({ e }: any) => {
-    let input = e.target.value;
-    setNumber(number + input);
-    console.log("foi");
-  };
   const clear = () => {
     setNumber(0);
   };
@@ -19,11 +14,11 @@ const App = () => {
     <div>
       <Input state={number} />
       <div>
-        {KeyboardNumeric.map((numb) => (
+        {KeyboardNumeric.map((num) => (
           <Button
-            onClick={inputNumber}
-            value={numb.value}
-            name={numb.keys_numb}
+            onClick={() => setNumber(num.keys_numb)}
+            value={num.keys_numb}
+            name={num.keys_numb}
           />
         ))}
       </div>

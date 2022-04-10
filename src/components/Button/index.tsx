@@ -1,6 +1,6 @@
 interface ButtonProps {
   name: number | string;
-  onClick: any;
+  onClick: () => void;
   value?: number | string;
 }
 
