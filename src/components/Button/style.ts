@@ -9,4 +9,8 @@ export const CardButton = styled.div`
     font-weight:600 ;
     height:60px ;
   }
+  button:hover{
+    font-size:16px;
+  
+  }
 `;

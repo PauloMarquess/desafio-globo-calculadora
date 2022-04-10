@@ -7,14 +7,18 @@ export const Container = styled.div`
   justify-content:center ;
   width:100% ;
   height:100vh ;
-  background-color:#a6cae5 ;
+  background-image:url('https://img.freepik.com/fotos-gratis/negocio-de-tecnologia-globo-com-papel-de-parede-gradiente_53876-97642.jpg?w=2000') ;
+  background-position:center right ;
   
 `;
 export const Calculator =styled.div`
 input{
   width:100% ;
-  height:30px ;
-  padding-left:5px;
+  height:40px ;
+  padding-left:10px;
+  border:1px solid #dadada ;
+  outline:none ;
+  font-size:16px ;
 }
 
 `
@@ -28,7 +32,6 @@ flex-wrap:wrap ;
 width:210px ;
 
 Button{
-  
   background-color:#e8e9ee ;
 }
 `

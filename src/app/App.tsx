@@ -21,7 +21,7 @@ const App = () => {
     <Container>
       <Calculator>
         <Input state={number} />
-        <Button onClick={clear} name="AC" />
+        {/* <Button onClick={clear} name="AC" /> */}
         <KeyboardCalculator>
           <Numeric>
             {KeyboardNumeric.map((num) => (
@@ -35,7 +35,11 @@ const App = () => {
           </Numeric>
           <Operator>
             {Operations.map((op) => (
-              <Button onClick={() => {}} name={op.operation} value={op.value} />
+              <Button
+                onClick={() => setNumber(op.operation)}
+                name={op.operation}
+                value={op.operation}
+              />
             ))}
           </Operator>
         </KeyboardCalculator>
