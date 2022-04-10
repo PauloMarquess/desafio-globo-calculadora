@@ -40,14 +40,18 @@ export const KeyboardNumeric = [
 export const Operations = [
   {
     operation: "*",
+    value: "*",
   },
   {
     operation: "/",
+    value: "/",
   },
   {
     operation: "+",
+    value: "+",
   },
   {
     operation: "-",
+    value: "-",
   },
 ];

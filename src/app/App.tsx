@@ -4,11 +4,11 @@ import Input from "../components/Input";
 import { KeyboardNumeric, Operations } from "../Mocks";
 
 const App = () => {
-  const [number, setNumber] = useState(1);
+  const [number, setNumber] = useState<any>(1);
 
   const inputNumber = ({ e }: any) => {
     let input = e.target.value;
-    setNumber(input);
+    setNumber(number + input);
     console.log("foi");
   };
   const clear = () => {
@@ -30,7 +30,7 @@ const App = () => {
       <div>
         <Button onClick={clear} name="AC" />
         {Operations.map((op) => (
-          <Button onClick={() => {}} name={op.operation} />
+          <Button onClick={() => {}} name={op.operation} value={op.value} />
         ))}
       </div>
     </div>
