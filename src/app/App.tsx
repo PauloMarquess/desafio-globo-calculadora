@@ -11,7 +11,7 @@ import {
 } from "./style";
 
 const App = () => {
-  const [number, setNumber] = useState<any>(1);
+  const [number, setNumber] = useState<any>(0);
 
   const clear = () => {
     setNumber(0);
@@ -20,13 +20,15 @@ const App = () => {
   return (
     <Container>
       <Calculator>
-        <Input state={number} />
-        {/* <Button onClick={clear} name="AC" /> */}
+        <header>
+          <Input state={number} />
+          <Button onClick={clear} name="AC" />
+        </header>
         <KeyboardCalculator>
           <Numeric>
             {KeyboardNumeric.map((num) => (
               <Button
-                onClick={() => setNumber(num.keys_numb)}
+                onClick={() => setNumber(`${number + num.keys_numb}`)}
                 value={num.keys_numb}
                 name={num.keys_numb}
               />

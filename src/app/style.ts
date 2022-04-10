@@ -12,9 +12,12 @@ export const Container = styled.div`
   
 `;
 export const Calculator =styled.div`
+header {
+  display:flex ;
+}
 input{
-  width:100% ;
-  height:40px ;
+  width:211px ;
+  height:60px ;
   padding-left:10px;
   border:1px solid #dadada ;
   outline:none ;
