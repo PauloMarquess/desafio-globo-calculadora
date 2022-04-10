@@ -36,15 +36,15 @@ export const KeyboardNumeric = [
 
 export const Operations = [
   {
-    operation: "*",
+    operation: " * ",
   },
   {
-    operation: "/",
+    operation: " / ",
   },
   {
-    operation: "+",
+    operation: " + ",
   },
   {
-    operation: "-",
+    operation: " - ",
   },
 ];

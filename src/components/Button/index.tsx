@@ -2,7 +2,7 @@ import { CardButton } from "./style";
 
 interface ButtonProps {
   name: number | string;
-  onClick: () => void;
+  onClick: any;
   value?: number | string;
 }
 

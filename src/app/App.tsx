@@ -38,7 +38,7 @@ const App = () => {
           <Operator>
             {Operations.map((op) => (
               <Button
-                onClick={() => setNumber(op.operation)}
+                onClick={() => setNumber(`${number + op.operation}`)}
                 name={op.operation}
                 value={op.operation}
               />
